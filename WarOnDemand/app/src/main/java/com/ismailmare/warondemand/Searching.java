@@ -7,6 +7,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
+//dummy class for test cases
 public class Searching extends AppCompatActivity {
 
     @Override
