@@ -36,7 +36,7 @@ public class BorrowingUseCaseTest extends ActivityInstrumentationTestCase2{
         status.setStatus("declined");
 
 
-        //assertEquals(ismail.getBids(), size(), 1);
+        assertEquals(ismail.getBorrowedItems(), 1);
 
     }
 
@@ -61,7 +61,7 @@ public class BorrowingUseCaseTest extends ActivityInstrumentationTestCase2{
         status.setStatus("declined");
 
 
-        //assertEquals(ismail.getBids(), size(), 1);
+        assertEquals(ismail.getItemsBorrowed(),1);
 
 
     }

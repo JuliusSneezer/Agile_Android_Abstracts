@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by ismailmare on 16-02-12.
  */
-public class Bid {
+public class Bid extends Profile{
 
     public Bid(){
 
@@ -24,8 +24,7 @@ public class Bid {
     }
 
     public int size(){
-        int num =5;
-        return num;
-
+        return 0;
     }
+
 }

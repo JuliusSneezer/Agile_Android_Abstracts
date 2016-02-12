@@ -22,15 +22,41 @@ public class Profile {
         return null;
     }
 
-    public void getBids(){
-        String bids = "hello";
-        return;
+    public int getBids(){
+        return 0;
     }
 
-    public String add(String bid){
+    public void add(String bid){
 
-        return bid;
+    }
 
+    public int getAcceptedBids(){
+        return 0;
+
+    }
+
+    public int getDeclinedBids(){
+        return 0;
+
+    }
+
+    public int getPendingBids(){
+        return 0;
+
+    }
+
+    public int size(){
+
+        return 0;
+
+    }
+
+    public int getBorrowedItems(){
+        return 0;
+    }
+
+    public int getItemsBorrowed(){
+        return 0;
     }
 
 

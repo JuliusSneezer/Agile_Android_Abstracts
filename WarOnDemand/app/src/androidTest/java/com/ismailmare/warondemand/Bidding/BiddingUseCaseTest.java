@@ -36,8 +36,8 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.add("offered");
         status.setStatus("declined");
 
-        //assertEquals(ismail.getBids(),size(),1);
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(ismail.getBids(),1);
+        assertEquals(ismail.getBids(),1);
 
     }
 
@@ -63,7 +63,8 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         status.setStatus("declined");
 
 
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(ismail.getPendingBids(),1);
+        assertEquals(chris.getPendingBids(),1);
 
     }
 
@@ -87,7 +88,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.getBids();
         ismail.add("offered");
         status.setStatus("declined");
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(ismail.getBids(),1);
 
     }
 
@@ -110,7 +111,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.getBids();
         ismail.add("offered");
         status.setStatus("declined");
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(ismail.getBids(),1);
 
 
     }
@@ -136,7 +137,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.getBids();
         ismail.add("offered");
         status.setStatus("declined");
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(ismail.getPendingBids(),1);
 
     }
 
@@ -161,7 +162,10 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.add("offered");
 
         status.setStatus("accpeted");
-        //assertEquals(ismail.getBids(),size(),1);
+
+        assertEquals(ismail.getBids(),1);
+        assertEquals(chris.getAcceptedBids(),1);
+
 
 
     }
@@ -188,7 +192,8 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.getBids();
         ismail.add("offered");
         status.setStatus("declined");
-        //assertEquals(ismail.getBids(),size(),1);
+        assertEquals(chris.getPendingBids(),0);
+        assertEquals(chris.getDeclinedBids(),1);
 
     }
 
