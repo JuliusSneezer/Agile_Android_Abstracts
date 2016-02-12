@@ -31,7 +31,6 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         chris.add("offered");
 
         Status status= new Status();
-        Bid pendingBid = new Bid();
         ismail.getBids();
         ismail.add("offered");
         status.setStatus("offered");
