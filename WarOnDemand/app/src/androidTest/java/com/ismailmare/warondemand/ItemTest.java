@@ -57,6 +57,7 @@ public class ItemTest extends ActivityInstrumentationTestCase2 {
 
         TextView textView = (TextView) ta.findViewById(R.id.intentText);
         assertEquals("The text should be displayed!", warItem.getName(), textView.getText().toString());
+
          //Unsure what to do here.
 
     }
