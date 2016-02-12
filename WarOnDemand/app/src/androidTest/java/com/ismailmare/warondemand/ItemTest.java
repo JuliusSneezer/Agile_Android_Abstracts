@@ -30,6 +30,9 @@ public class ItemTest extends ActivityInstrumentationTestCase2 {
     private void editItem(String newText){
         //Simulate button click.
     }
+    private void viewItems(){
+        //Simulate button click that views items.
+    }
 
     public void testAddItem(){
         /*Intent intent = new Intent();
@@ -44,14 +47,18 @@ public class ItemTest extends ActivityInstrumentationTestCase2 {
         assertTrue(items.hasItem(warItem));
     }
     public void testViewItems(){
-/*        Intent intent = new Intent();
+        //Test will fail, because not properally integrated backend.
+        ItemList items = new ItemList();
+        WarItem warItem = new WarItem("Test Item");
+        items.add(warItem);
+        Intent intent = new Intent();
         setActivityIntent(intent);
-        TestActivity ta = (TestActivity) getActivity();
+        viewActivity ta = (viewActivity) getActivity();
 
         TextView textView = (TextView) ta.findViewById(R.id.intentText);
-        assertEquals("The text should be displayed!", ",message 2", textView.getText().toString());
+        assertEquals("The text should be displayed!", warItem.getName(), textView.getText().toString());
          //Unsure what to do here.
-         */
+
     }
     public void testViewItem() {
         //Not sure if correct.
@@ -60,8 +67,8 @@ public class ItemTest extends ActivityInstrumentationTestCase2 {
         items.add(warItem);
         WarItem returnedItem = items.getItem(0);
         assertEquals(returnedItem.getName(),warItem.getName());
-        assertEquals(returnedItem.getDesc(),warItem.getDesc());
-        assertEquals(returnedItem.getStatus(),warItem.getStatus());
+        assertEquals(returnedItem.getDesc(), warItem.getDesc());
+        assertEquals(returnedItem.getStatus(), warItem.getStatus());
 
     }
     public void testEditItem(){
