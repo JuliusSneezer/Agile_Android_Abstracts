@@ -19,7 +19,7 @@ public class BorrowingUseCaseTest extends ActivityInstrumentationTestCase2{
     /** Use Case 19
      * 06.01.01
      */
-    public void ViewBorrowedItems(){
+    public void testViewBorrowedItems(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");
@@ -44,7 +44,7 @@ public class BorrowingUseCaseTest extends ActivityInstrumentationTestCase2{
     /** Use Case 20
      * 06.02.01
      */
-    public void ViewItemsBorrowed(){
+    public void testViewItemsBorrowed(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");

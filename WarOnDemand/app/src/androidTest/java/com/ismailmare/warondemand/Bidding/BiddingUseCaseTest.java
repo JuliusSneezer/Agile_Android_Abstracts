@@ -36,7 +36,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
         ismail.add("offered");
         status.setStatus("offered");
 
-        assertEquals(ismail.getBids(),1);
+        assertEquals(ismail.BidForItem(), "offfered");
         assertEquals(ismail.getBids(),1);
 
     }
@@ -46,7 +46,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * 05.02.01
      * @return ArrayList
      */
-    public void PendingBids(){
+    public void testPendingBids(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");
@@ -71,7 +71,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * Use Case 14
      * 05.03.01
      */
-    public void GetBidNotifications(){
+    public void testGetBidNotifications(){
 
         Profile chris = new Profile();
         Profile ismail =  new Profile();
@@ -94,7 +94,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * Use Case 15
      * 05.04.01
      */
-    public void ListItemsBidded(){
+    public void testListItemsBidded(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");
@@ -119,7 +119,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * 05.05.01
      */
 
-    public void ViewItemsBidded(){
+    public void testViewItemsBidded(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");
@@ -146,7 +146,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * 05.06.01
      */
 
-    public void AcceptBid(){
+    public void testAcceptBid(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");
@@ -175,7 +175,7 @@ public class BiddingUseCaseTest extends ActivityInstrumentationTestCase2{
      * 05.07.01
      */
 
-    public void DeclineBid(){
+    public void testDeclineBid(){
         Profile chris = new Profile();
         Profile ismail =  new Profile();
         ismail.createProfile("ismail", "7802422122");

@@ -59,5 +59,8 @@ public class Profile {
         return 0;
     }
 
+    public String BidForItem(){
+        return "hello";
+    }
 
 }
