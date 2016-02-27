@@ -12,32 +12,32 @@ public class ProfileTest extends ActivityInstrumentationTestCase2 {
     }
 
     public void testCreateProfile() {
-        Profile profile = new Profile();
+        User profile = new User();
         String username = "user";
         String contactInfo = "780-2212";
 
-        profile.createProfile(username, contactInfo);
+        profile.createUser(username, contactInfo);
     }
 
     public void testReturnContactInfo(){
-        Profile profile = new Profile();
+        User profile = new User();
         String username = "user";
         String contactInfo = "780-2212";
 
-        profile.createProfile(username, contactInfo);
+        profile.createUser(username, contactInfo);
 
         assertEquals(profile.returnContactInfo(), contactInfo);
     }
 
     public void testEditProfile(){
-        Profile profile = new Profile();
+        User profile = new User();
         String username = "user";
         String contactInfo = "780-2212";
         String contactInfo2 = "780-2222";
 
-        profile.createProfile(username, contactInfo);
+        profile.createUser(username, contactInfo);
 
-        profile.editProfile(contactInfo2);
+        profile.editUser(contactInfo2);
 
         assertEquals(profile.returnContactInfo(), contactInfo2);
     }

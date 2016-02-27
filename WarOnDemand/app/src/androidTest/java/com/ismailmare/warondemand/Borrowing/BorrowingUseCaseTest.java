@@ -3,7 +3,6 @@ package com.ismailmare.warondemand.Borrowing;
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.ismailmare.warondemand.Bid;
-import com.ismailmare.warondemand.Profile;
 import com.ismailmare.warondemand.Status;
 
 /**
