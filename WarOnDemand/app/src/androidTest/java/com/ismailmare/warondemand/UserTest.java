@@ -176,7 +176,31 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
         assertEquals(user.getBorrowedItems(), test);
     }
 
-    //test pending bids here
-    //need item statuses to be done first
+    public void testPendingBids() {
+        User user = new User();
+        String username = "user";
+        String email = "test@something.com";
+        String number = "780-1111";
+
+        user.createUser(username, email, number);
+
+        String itemName = "item";
+        String itemDesc = "new item";
+        WarItem warItem = new WarItem(itemName, itemDesc);
+
+        String itemName2 = "item2";
+        String itemDesc2 = "new item 2";
+        WarItem warItem2 = new WarItem(itemName2, itemDesc2);
+
+        user.addItemToInventory(warItem);
+        user.addItemToInventory(warItem2);
+
+        warItem.setStatus(1);
+
+        ArrayList<WarItem> test = new ArrayList<>();
+        test.add(warItem);
+
+        assertEquals(user.pendingBids(), test);
+    }
 
 }

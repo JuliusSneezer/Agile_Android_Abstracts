@@ -67,7 +67,7 @@ public class User {
     public ArrayList pendingBids() {
         ArrayList<WarItem> itemsBeingBidOn = new ArrayList<>();
         for (int i = 0; i < inventory.size(); i++){
-            if (inventory.get(i).getStatus() == "BidOn"){
+            if (inventory.get(i).getStatus() == 1){
                 itemsBeingBidOn.add(inventory.get(i));
             }
         }

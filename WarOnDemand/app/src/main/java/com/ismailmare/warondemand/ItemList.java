@@ -26,7 +26,7 @@ public class ItemList {
     public void editItemDesc(String newText, int index){
         items.get(index).setDesc(newText);
     }
-    public void editItemStatus(String newText, int index){
-        items.get(index).setStatus(newText);
+    public void editItemStatus(int newStatus, int index){
+        items.get(index).setStatus(newStatus);
     }
 }

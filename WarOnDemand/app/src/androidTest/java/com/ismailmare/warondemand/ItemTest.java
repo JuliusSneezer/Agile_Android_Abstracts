@@ -104,11 +104,11 @@ public class ItemTest extends ActivityInstrumentationTestCase2 {
     public void testSetReturn(){
         ItemList items = new ItemList();
         WarItem warItem = new WarItem("Test Item");
-        warItem.setStatus("Borrowed");
+        warItem.setStatus(2);
         items.add(warItem);
-        String editedText = "Available";
-        items.editItemStatus(editedText, 0);
-        assertEquals(items.getItem(0).getStatus(), editedText);
+        int editedStatus = 0;
+        items.editItemStatus(editedStatus, 0);
+        assertEquals(items.getItem(0).getStatus(), editedStatus);
     }
     public void testOffline(){
         //Similar to AddItem.
