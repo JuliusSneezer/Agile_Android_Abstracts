@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by ismailmare on 16-02-12.
  */
-public class Bid extends Profile{
+public class Bid extends User{
 
     public Bid(){
 
@@ -19,7 +19,7 @@ public class Bid extends Profile{
 
     }
 
-    public void add(String bid){
+    public void addBid(String bid){
 
     }
 

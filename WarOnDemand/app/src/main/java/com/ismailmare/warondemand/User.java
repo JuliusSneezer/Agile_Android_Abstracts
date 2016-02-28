@@ -6,22 +6,22 @@ import java.util.ArrayList;
  * Created by Chris on 2/26/2016.
  */
 public class User {
-    String username;
-    ArrayList<String> contactInfo; //email 1st, phoneNumber 2nd, something 3rd
-    ArrayList<String> notifications;
-    ArrayList<WarItem> inventory;
-    ArrayList<WarItem> itemsBidOn;
-    ArrayList<WarItem> itemsBorrowed;
+    private String username;
+    private ArrayList<String> contactInfo = new ArrayList<>(); //email 1st, phoneNumber 2nd, something 3rd
+    private ArrayList<String> notifications = new ArrayList<>();
+    private ArrayList<WarItem> inventory = new ArrayList<>();
+    private ArrayList<WarItem> itemsBidOn = new ArrayList<>();
+    private ArrayList<WarItem> itemsBorrowed = new ArrayList<>();
 
     public void createUser(String name, String email, String phoneNumber) {
-        //dummy function for tests
         username = name;
         contactInfo.add(0, email);
         contactInfo.add(1, phoneNumber);
     }
 
     public void editUser(String name, String email, String phoneNumber) {
-        //dummy function for tests
+
+        username = name;
         contactInfo.set(0, email);
         contactInfo.set(1, phoneNumber);
     }
@@ -30,27 +30,36 @@ public class User {
         return contactInfo;
     }
 
+    //all functions for items in users inventory
     public void addItemToInventory(WarItem itemAdded) {
         inventory.add(itemAdded);
     }
 
-    public void addItemToBidOn(WarItem bidOnItem){
-        itemsBidOn.add(bidOnItem);
-    }
+    public ArrayList getItemsInInventory() {return inventory;}
 
     public void removeItemFromInventory(WarItem itemAdded) {
         inventory.remove(itemAdded);
     }
 
+    //all functions for item user is bidding on
+    public void addItemToBidOn(WarItem bidOnItem){
+        itemsBidOn.add(bidOnItem);
+    }
+
+    public ArrayList getItemsBiddingOn(){return itemsBidOn;}
+
     public void removeItemFromBidOn(WarItem bidOnItem){
         itemsBidOn.remove(bidOnItem);
     }
 
+    //all functions for items user is borrowing
     public void addItemToBorrowed(WarItem borrowed){
         itemsBorrowed.add(borrowed);
     }
 
-    public void returnItem(WarItem returned){
+    public ArrayList getBorrowedItems() {return itemsBorrowed;}
+
+    public void returnItemFromBorrowed(WarItem returned){
         itemsBorrowed.remove(returned);
     }
 
