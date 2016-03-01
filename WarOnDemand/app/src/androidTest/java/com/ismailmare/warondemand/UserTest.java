@@ -66,7 +66,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc, cost, user);
 
         user.addItemToInventory(warItem);
 
@@ -86,7 +87,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         user.addItemToInventory(warItem);
         user.removeItemFromInventory(warItem);
@@ -106,7 +108,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         user.addItemToBidOn(warItem);
 
@@ -126,7 +129,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         user.addItemToBidOn(warItem);
         user.removeItemFromBidOn(warItem);
@@ -146,7 +150,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         user.addItemToBorrowed(warItem);
 
@@ -166,7 +171,8 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         user.addItemToBorrowed(warItem);
         user.returnItemFromBorrowed(warItem);
@@ -186,11 +192,13 @@ public class UserTest extends ActivityInstrumentationTestCase2 {
 
         String itemName = "item";
         String itemDesc = "new item";
-        WarItem warItem = new WarItem(itemName, itemDesc);
+        Double cost  = 0.0;
+        WarItem warItem = new WarItem(itemName, itemDesc,cost, user);
 
         String itemName2 = "item2";
         String itemDesc2 = "new item 2";
-        WarItem warItem2 = new WarItem(itemName2, itemDesc2);
+        Double cost2  = 0.1;
+        WarItem warItem2 = new WarItem(itemName2, itemDesc2, cost2, user);
 
         user.addItemToInventory(warItem);
         user.addItemToInventory(warItem2);

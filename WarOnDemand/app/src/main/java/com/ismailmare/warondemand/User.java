@@ -20,7 +20,6 @@ public class User {
     }
 
     public void editUser(String name, String email, String phoneNumber) {
-
         username = name;
         contactInfo.set(0, email);
         contactInfo.set(1, phoneNumber);
@@ -78,12 +77,6 @@ public class User {
 
     /*
     //all this shit was for early test cases, may use or not, will leave until clean up later
-    public int getBids(){
-        return 0;
-    }
-
-    public void add(String bid){
-    }
 
     public int getAcceptedBids(){
         return 0;
@@ -94,14 +87,6 @@ public class User {
     }
 
     public int getPendingBids(){
-        return 0;
-    }
-
-    public int size(){
-        return 0;
-    }
-
-    public int getBorrowedItems(){
         return 0;
     }
 
